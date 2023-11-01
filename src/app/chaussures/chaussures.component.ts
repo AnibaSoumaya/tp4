@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { chaussure } from '../app.module';
+
 import { ChaussuresService } from '../service/chaussures.service';
+import { chaussure } from '../model/chaussure';
 
 
 @Component({
@@ -10,13 +11,12 @@ import { ChaussuresService } from '../service/chaussures.service';
 })
 export class ChaussuresComponent {
   chaussures : chaussure[]; //un tableau de chaînes de caractères 
-test : String ="Ahmed"
   constructor(private ChaussureService: ChaussuresService) 
   { 
     this.chaussures = ChaussureService.listeChaussures(); 
   } 
   ngOnit(){
-    this.test
+
   }
   supprimerChaussure(c: chaussure) 
   { 

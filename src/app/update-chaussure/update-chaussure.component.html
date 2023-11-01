@@ -48,6 +48,15 @@
                     <option value="bleu">Bleu</option>
                 </select>
             </div> 
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <select class="form-control form-control-lg" id="codeBar" name="codeBar"
+                [(ngModel)]="upcodebar">
+                <option *ngFor="let lieu of lieu" [value]="lieu.codeBar" >
+                {{lieu.pays}}
+                </option>
+                </select>
+            </div>
                           
                           <div class="mt-2"> 
            <button type="submit"  (click)="updateChaussure()" class="btn btn-success">Modifer</button> 

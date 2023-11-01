@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { chaussure } from '../app.module';
+import { LieuCreationChaussure } from '../model/LieuCreationChaussure';
+import { chaussure } from '../model/chaussure';
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,13 +10,21 @@ export class ChaussuresService {
 
   chaussures : chaussure[]; //un tableau de chaînes de caractères 
   chaussure! :chaussure;
+  lieu! : LieuCreationChaussure[];
   constructor() 
   { 
+    this.lieu = [
+      {ville: "paris" ,pays : "france" , codeBar:123 },
+      {ville: "New York" ,pays : "États-Unis" , codeBar:321 }
+    ]
     this.chaussures = 
     [ 
-      {idChaussure : 1,  nomChaussure : "Addidas", prixChaussure: 300.600 , pointureChaussure: 38,couleurChaussure: "Blanc"}, 
-      {idChaussure : 2,  nomChaussure : "Nike", prixChaussure : 450 , pointureChaussure: 39, couleurChaussure:"Noir"}, 
-      {idChaussure : 3,  nomChaussure :"Puma", prixChaussure : 250.999,pointureChaussure: 37, couleurChaussure: "Rouge"},
+      {idChaussure : 1,  nomChaussure : "Addidas", prixChaussure: 300.600 , pointureChaussure: 38,couleurChaussure: "Blanc",
+       lieuC : {ville: "paris" ,pays : "france" , codeBar:123 }}, 
+      {idChaussure : 2,  nomChaussure : "Nike", prixChaussure : 450 , pointureChaussure: 39, couleurChaussure:"Noir" , 
+      lieuC : {ville: "paris" ,pays : "france" , codeBar:123 }}, 
+      {idChaussure : 3,  nomChaussure :"Puma", prixChaussure : 250.999,pointureChaussure: 37, couleurChaussure: "Rouge" ,
+       lieuC : {ville: "New York" ,pays : "États-Unis" , codeBar:321 }},
       
     ];  
   } 
@@ -28,6 +38,17 @@ export class ChaussuresService {
     this.chaussures.push(chauss); 
   
   }
+
+  listelieu():LieuCreationChaussure[]
+  {
+    return this.lieu
+  }
+
+  consulterlieu( codeBar: number)
+  {
+    return this.lieu.find(lieu => lieu.codeBar == codeBar)!;
+  }
+
   supprimerChaussure( chauss: chaussure){ 
     //supprimer le produit chauss du tableau chaussures  
      const index = this.chaussures.indexOf(chauss, 0); 

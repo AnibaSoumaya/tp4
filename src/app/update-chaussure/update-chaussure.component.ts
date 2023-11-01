@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { chaussure } from '../app.module';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ChaussuresService } from '../service/chaussures.service';
+import { chaussure } from '../model/chaussure';
+import { LieuCreationChaussure } from '../model/LieuCreationChaussure';
 
 
 @Component({
@@ -11,18 +12,25 @@ import { ChaussuresService } from '../service/chaussures.service';
 })
 export class UpdateChaussureComponent {
   currentChaussure  = new chaussure(); 
+  lieu ! : LieuCreationChaussure[];
+  upcodebar ! : number;
+
+
    
   constructor(private activatedRoute: ActivatedRoute, 
               private router :Router,
               private ChaussureService: ChaussuresService) { } 
  
   ngOnInit() { 
+    this.lieu = this.ChaussureService.listelieu();
     // console.log(this.route.snapshot.params.id); 
-    this.currentChaussure = this.ChaussureService.consulterChaussure(this.activatedRoute.snapshot. params['id']); 
+    this.currentChaussure = this.ChaussureService.consulterChaussure(this.activatedRoute.snapshot. params['id']);
+    this.upcodebar = this.currentChaussure.lieuC.codeBar; 
      //console.log(this.currentChaussure);      
   } 
   updateChaussure() { 
       //console.log(this.currentChaussure); 
+      this.currentChaussure.lieuC = this.ChaussureService.consulterlieu(this.upcodebar);
       this.ChaussureService.updateChaussure(this.currentChaussure);
       this.router.navigate(['chaussures']); 
   } 
