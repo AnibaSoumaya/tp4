@@ -13,7 +13,8 @@ import { UpdateChaussureComponent } from './update-chaussure/update-chaussure.co
     AppComponent,
     ChaussuresComponent,
     AddChaussureComponent,
-    UpdateChaussureComponent
+    UpdateChaussureComponent,
+  
   ],
   imports: [
     BrowserModule,

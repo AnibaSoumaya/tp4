@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { chaussure } from '../app.module';
-import { ChaussureService } from '../chaussure.service';
+
 import { ActivatedRoute, Router } from '@angular/router';
+import { ChaussuresService } from '../service/chaussures.service';
 
 @Component({
   selector: 'app-add-chaussure',
@@ -12,7 +13,7 @@ export class AddChaussureComponent {
   newChaussure = new chaussure(); 
   constructor(private activatedRoute: ActivatedRoute,
               private router :Router,  
-              private ChaussureService: ChaussureService){} 
+              private ChaussureService: ChaussuresService){} 
   addChaussure()
   { 
     //console.log(this.newChaussure); 

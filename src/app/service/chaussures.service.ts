@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { chaussure } from './app.module';
+import { chaussure } from '../app.module';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ChaussureService {
+export class ChaussuresService {
 
   chaussures : chaussure[]; //un tableau de chaînes de caractères 
   chaussure! :chaussure;

@@ -6,7 +6,7 @@ import { UpdateChaussureComponent } from './update-chaussure/update-chaussure.co
 
 const routes: Routes = [
   {path: "chaussures", component : ChaussuresComponent},
-  {path: "addchaussure", component : AddChaussureComponent},
+  {path: "add-chaussure", component : AddChaussureComponent},
   {path: "", redirectTo: "chaussures", pathMatch: "full" },
   {path: "updateChaussure/:id",  component: UpdateChaussureComponent} 
   

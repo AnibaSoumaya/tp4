@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { chaussure } from '../app.module';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ChaussureService } from '../chaussure.service';
+import { ChaussuresService } from '../service/chaussures.service';
+
 
 @Component({
   selector: 'app-update-chaussure',
@@ -13,7 +14,7 @@ export class UpdateChaussureComponent {
    
   constructor(private activatedRoute: ActivatedRoute, 
               private router :Router,
-              private ChaussureService: ChaussureService) { } 
+              private ChaussureService: ChaussuresService) { } 
  
   ngOnInit() { 
     // console.log(this.route.snapshot.params.id); 
