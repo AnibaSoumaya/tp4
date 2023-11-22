@@ -7,6 +7,12 @@ import { ChaussuresComponent } from './chaussures/chaussures.component';
 import { AddChaussureComponent } from './add-chaussure/add-chaussure.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateChaussureComponent } from './update-chaussure/update-chaussure.component';
+import { LoginComponent } from './login/login.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -14,6 +20,9 @@ import { UpdateChaussureComponent } from './update-chaussure/update-chaussure.co
     ChaussuresComponent,
     AddChaussureComponent,
     UpdateChaussureComponent,
+    LoginComponent,
+    ForbiddenComponent,
+
   
   ],
   imports: [
@@ -21,7 +30,9 @@ import { UpdateChaussureComponent } from './update-chaussure/update-chaussure.co
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

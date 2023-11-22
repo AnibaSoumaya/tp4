@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { ChaussuresService } from '../service/chaussures.service';
 import { chaussure } from '../model/chaussure';
+import { AuthService } from '../service/auth.service';
 
 
 @Component({
@@ -11,7 +12,8 @@ import { chaussure } from '../model/chaussure';
 })
 export class ChaussuresComponent {
   chaussures : chaussure[]; //un tableau de chaînes de caractères 
-  constructor(private ChaussureService: ChaussuresService) 
+  constructor(private ChaussureService: ChaussuresService,
+              public authService: AuthService) 
   { 
     this.chaussures = ChaussureService.listeChaussures(); 
   } 

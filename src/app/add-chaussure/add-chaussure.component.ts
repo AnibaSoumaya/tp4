@@ -32,8 +32,7 @@ export class AddChaussureComponent {
     this.ChaussureService.consulterlieu(this.newcodeBar);
     this.newChaussure.lieuC = this.newLieu;
     this.ChaussureService.ajouterChaussure(this.newChaussure);
-    this.router.navigate(['chaussures']);
-    let conf = confirm("Ajout avec succes!"); 
+    this.router.navigate(['chaussures']); 
 
   }
 

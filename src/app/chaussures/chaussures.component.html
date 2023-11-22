@@ -10,9 +10,9 @@
                           <td>{{chaussure.prixChaussure}}</td> 
                           <td>{{chaussure.pointureChaussure}}</td> 
                           <td>{{chaussure.couleurChaussure}} </td>
-                          <td>{{chaussure.lieuC.ville}}</td>
-                          <td><a class="btn btn-danger" (click)="supprimerChaussure(chaussure)">Supprimer</a></td> 
-                          <td><a class="btn btn-success" [routerLink]="['/updateChaussure',chaussure.idChaussure]">Modifier</a></td>
+                          <td>{{chaussure.lieuC.pays}}</td>
+                          <td><a *ngIf="authService.isAdmin()" class="btn btn-danger" (click)="supprimerChaussure(chaussure)">Supprimer</a></td> 
+                          <td><a *ngIf="authService.isAdmin()"  class="btn btn-success" [routerLink]="['/updateChaussure',chaussure.idChaussure]">Modifier</a></td>
                         </tr>    
                                                          
                </tbody> 

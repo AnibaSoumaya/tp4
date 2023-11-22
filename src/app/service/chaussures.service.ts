@@ -14,17 +14,17 @@ export class ChaussuresService {
   constructor() 
   { 
     this.lieu = [
-      {ville: "paris" ,pays : "france" , codeBar:123 },
-      {ville: "New York" ,pays : "États-Unis" , codeBar:321 }
+      {pays : "france" , codeBar:123 },
+      {pays : "États-Unis" , codeBar:321 }
     ]
     this.chaussures = 
     [ 
       {idChaussure : 1,  nomChaussure : "Addidas", prixChaussure: 300.600 , pointureChaussure: 38,couleurChaussure: "Blanc",
-       lieuC : {ville: "paris" ,pays : "france" , codeBar:123 }}, 
+       lieuC : {pays : "france" , codeBar:123 }}, 
       {idChaussure : 2,  nomChaussure : "Nike", prixChaussure : 450 , pointureChaussure: 39, couleurChaussure:"Noir" , 
-      lieuC : {ville: "paris" ,pays : "france" , codeBar:123 }}, 
+      lieuC : {pays : "france" , codeBar:123 }}, 
       {idChaussure : 3,  nomChaussure :"Puma", prixChaussure : 250.999,pointureChaussure: 37, couleurChaussure: "Rouge" ,
-       lieuC : {ville: "New York" ,pays : "États-Unis" , codeBar:321 }},
+       lieuC : {pays : "États-Unis" , codeBar:321 }},
       
     ];  
   } 
