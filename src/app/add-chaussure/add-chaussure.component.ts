@@ -22,7 +22,10 @@ export class AddChaussureComponent {
   
   ngOnInit() 
   {
-    this.lieu = this.ChaussureService.listelieu();
+    this.ChaussureService.listelieu().subscribe(
+      (lieuData: LieuCreationChaussure[]) => {
+        this.lieu = lieuData;
+      })
   }
 
   addChaussure()

@@ -12,13 +12,13 @@ export class chaussureGuard implements CanActivate
   canActivate(route: ActivatedRouteSnapshot,     
               state: RouterStateSnapshot):  boolean  
   { 
-    if (this.authService.isAdmin()) 
+    if (this.authService.isAdmin())
       return true;
     else         
     {           
       this.router.navigate(['app-forbidden']);            
       return false; 
     } 
-} 
+}
 
 }

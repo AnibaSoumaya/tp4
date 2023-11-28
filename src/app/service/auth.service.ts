@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 export class AuthService {
 
   users: User[] = [{"username":"admin","password":"123","roles":['ADMIN']}, 
-                   {"username":"soumaya","password":"123","roles":['USER']} ]; 
+                   {"username":"soumaya","password":"123","roles":['USER']},
+                  ]; 
 
   
   public loggedUser!:string; 
@@ -51,6 +52,8 @@ export class AuthService {
     return false; 
     return  (this.roles.indexOf('ADMIN') >-1); 
   } 
+
+  
  
 
   setLoggedUserFromLocalStorage(login : string) 

@@ -6,6 +6,8 @@ import { UpdateChaussureComponent } from './update-chaussure/update-chaussure.co
 import { LoginComponent } from './login/login.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { chaussureGuard } from './chaussure.guard';
+import { RechercheParLieuComponent } from './recherche-par-lieu/recherche-par-lieu.component';
+
 
 
 
@@ -15,7 +17,8 @@ const routes: Routes = [
   {path: "", redirectTo: "chaussures", pathMatch: "full" },
   {path: "updateChaussure/:id",  component: UpdateChaussureComponent},
   {path:  'login', component: LoginComponent},
-  { path: 'app-forbidden', component: ForbiddenComponent },
+  {path: 'app-forbidden', component: ForbiddenComponent },
+  {path: "rechercheParLieu", component : RechercheParLieuComponent}
 
 
   

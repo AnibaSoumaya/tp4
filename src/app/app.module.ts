@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { UpdateChaussureComponent } from './update-chaussure/update-chaussure.component';
 import { LoginComponent } from './login/login.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { RechercheParLieuComponent } from './recherche-par-lieu/recherche-par-lieu.component';
 
 
 
@@ -22,6 +23,7 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
     UpdateChaussureComponent,
     LoginComponent,
     ForbiddenComponent,
+    RechercheParLieuComponent,
 
   
   ],

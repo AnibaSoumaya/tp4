@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { LieuCreationChaussure } from '../model/LieuCreationChaussure';
 import { chaussure } from '../model/chaussure';
+import { Observable, of } from 'rxjs';
 
 
 @Injectable({
@@ -39,9 +40,8 @@ export class ChaussuresService {
   
   }
 
-  listelieu():LieuCreationChaussure[]
-  {
-    return this.lieu
+  listelieu(): Observable<LieuCreationChaussure[]> {
+    return of(this.lieu);
   }
 
   consulterlieu( codeBar: number)
@@ -88,6 +88,16 @@ export class ChaussuresService {
       });
    
     } 
+
+    rechercherParLieu(pays: String): Observable<chaussure[]> {
+      console.log('Lieu de recherche :', pays);
+      // Filtrer les chaussures par pays
+      const chaussuresFiltrees = this.chaussures.filter(chaussure => chaussure.lieuC.pays === pays);
+    
+      console.log('Chaussures filtrées :', chaussuresFiltrees);
+      // Retourner un Observable de la liste filtrée
+      return of(chaussuresFiltrees);
+    }
 
    
 }

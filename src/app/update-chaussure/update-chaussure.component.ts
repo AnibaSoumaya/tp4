@@ -22,7 +22,10 @@ export class UpdateChaussureComponent {
               private ChaussureService: ChaussuresService) { } 
  
   ngOnInit() { 
-    this.lieu = this.ChaussureService.listelieu();
+    this.ChaussureService.listelieu().subscribe(
+      (lieuData: LieuCreationChaussure[]) => {
+        this.lieu = lieuData;
+      })
     // console.log(this.route.snapshot.params.id); 
     this.currentChaussure = this.ChaussureService.consulterChaussure(this.activatedRoute.snapshot. params['id']);
     this.upcodebar = this.currentChaussure.lieuC.codeBar; 

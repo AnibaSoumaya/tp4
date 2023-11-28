@@ -14,8 +14,9 @@
         Chaussures
       </a>
       <div class="dropdown-menu">
-        <a *ngIf="authService.isAdmin()" class="dropdown-item" routerLink="add-chaussure">Ajouter</a>
+        <a *ngIf="authService.isAdmin() " class="dropdown-item" routerLink="add-chaussure">Ajouter</a>
         <a class="dropdown-item" href="#">Lister</a>
+        <a class="dropdown-item"  routerLink="/rechercheParLieu" >Recherche Par Lieu </a>
       </div>
     </li>
   </ul>
