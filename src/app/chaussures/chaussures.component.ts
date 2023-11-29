@@ -18,7 +18,7 @@ export class ChaussuresComponent {
     this.chaussures = ChaussureService.listeChaussures(); 
   } 
   ngOnit(){
-
+    
   }
   supprimerChaussure(c: chaussure) 
   { 

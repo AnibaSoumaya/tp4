@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { chaussureGuard } from './chaussure.guard';
 import { RechercheParLieuComponent } from './recherche-par-lieu/recherche-par-lieu.component';
+import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.component';
 
 
 
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: "updateChaussure/:id",  component: UpdateChaussureComponent},
   {path:  'login', component: LoginComponent},
   {path: 'app-forbidden', component: ForbiddenComponent },
-  {path: "rechercheParLieu", component : RechercheParLieuComponent}
+  {path: "rechercheParLieu", component : RechercheParLieuComponent},
+  {path: "rechercheParNom", component : RechercheParNomComponent},
 
 
   

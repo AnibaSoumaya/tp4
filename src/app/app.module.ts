@@ -10,6 +10,8 @@ import { UpdateChaussureComponent } from './update-chaussure/update-chaussure.co
 import { LoginComponent } from './login/login.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { RechercheParLieuComponent } from './recherche-par-lieu/recherche-par-lieu.component';
+import { SearchFilterPipe } from './search-filter.pipe';
+import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.component';
 
 
 
@@ -24,6 +26,8 @@ import { RechercheParLieuComponent } from './recherche-par-lieu/recherche-par-li
     LoginComponent,
     ForbiddenComponent,
     RechercheParLieuComponent,
+    SearchFilterPipe,
+    RechercheParNomComponent,
 
   
   ],
