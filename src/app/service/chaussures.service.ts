@@ -99,15 +99,7 @@ export class ChaussuresService {
       return of(chaussuresFiltrees);
     }
 
-    rechercherParNom(nomChaussure: String): Observable<chaussure[]> {
-      console.log('nom de recherche :', nomChaussure);
-      // Filtrer les chaussures par nom
-      const chaussuresFiltrees = this.chaussures.filter(chaussure => chaussure.nomChaussure === nomChaussure);
-    
-      console.log('Chaussures filtrées :', chaussuresFiltrees);
-      // Retourner un Observable de la liste filtrée
-      return of(chaussuresFiltrees);
-    }
+   
 
 
 
